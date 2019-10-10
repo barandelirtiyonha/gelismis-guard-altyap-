@@ -61,4 +61,3 @@ module.exports.help = {
   description: 'Yardım Menüsünü Gösterir.',
   usage: 'yardım'
 };
-//XiR

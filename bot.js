@@ -132,4 +132,3 @@ client.on('error', e => {
 });
 
 client.login(ayarlar.token);
-//XiR
