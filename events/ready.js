@@ -8,7 +8,7 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
   console.log(`${client.user.username} ismi ile giriş yapıldı!`);
-  client.user.setStatus("dnd");
+  client.user.setStatus("idle");
   //idle = boşta
   //dnd = rahatsız etmeyin
   //online = çevrimiçi
