@@ -67,7 +67,7 @@
   "repository": {
     "url": "https://glitch.com/edit/#!/salty-airport"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "keywords": [
     "node",
     "glitch",
