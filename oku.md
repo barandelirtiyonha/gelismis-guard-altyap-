@@ -3,7 +3,7 @@
  
  Discord Botumuzun Sitesi: <https://shydra.glitch.me//>
  
- Discord Botumuzun Destek Sunucusu: <https://discordapp.com/invite/EDHTEQN/>
+ Discord Botumuzun Destek Sunucusu: <https://discordapp.com/invite/8KcTTQa/>
  
  Discord Kod Paylaşım Sunucumuz: <https://discord.gg/Qx4XH6T/>
  
