@@ -1,13 +1,8 @@
-                          Shydra Kod Paylaşım
- Discord Botumuz: <https://is.gd/NisLKa/>
+                            FYUKAS BOŞ BOT ALTYAPI
+ Discord Botumuzun Sitesi: <https://fyukas.glitch.me/>
  
- Discord Botumuzun Sitesi: <https://shydra.glitch.me//>
+ Discord Botumuzun Destek Sunucusu: <https://discordapp.com/invite/qpbSqJU>
  
- Discord Botumuzun Destek Sunucusu: <https://discordapp.com/invite/8KcTTQa/>
- 
- Discord Kod Paylaşım Sunucumuz: <https://discord.gg/Qx4XH6T/>
- 
+ Discord Kod Paylaşım Sunucumuz: <https://discordapp.com/invite/qpbSqJU>
 
-                            Açıklama
-
-  Telif Hakkı Vardır Felan Zımbırtılar Kesinlikle Yalandır. Diğer Sunucularda Böyle Saçma Şeyler Gördüm Dilediğiniz Gibi Çalabilirsiniz.
+                            FYUKAS BOŞ BOT ALTYAPI
