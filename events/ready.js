@@ -13,16 +13,14 @@ module.exports = client => {
         "BAKIMDAYIZ",
         "BAKIMDAYIZ",
         "BAKIMDAYIZ",
-        "BAKIMDAYIZ",
-        "BAKIMDAYIZ",
-        "BAKIMDAYIZ",
         "BAKIMDAYIZ"
+
     ];
 
     setInterval(function() {
 
         var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
 
-        client.user.setGame(oyun[random], "");
+        client.user.setGame(oyun[random], "https://www.twitch.tv/fyukas");
         }, 2 * 2500);
 }
