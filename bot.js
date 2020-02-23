@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + "Fyukas 7/24 AKTİF TUTMA İŞLEMİ BAŞARILI");
+  console.log(Date.now() + "PinkCode 7/24 AKTİF TUTMA İŞLEMİ BAŞARILI");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);

@@ -1,8 +1,6 @@
-                            FYUKAS BOŞ BOT ALTYAPI
- Discord Botumuzun Sitesi: <https://fyukas.glitch.me/>
+                            PinkCode BOŞ BOT ALTYAPI
  
- Discord Botumuzun Destek Sunucusu: <https://discordapp.com/invite/qpbSqJU>
  
- Discord Kod Paylaşım Sunucumuz: <https://discordapp.com/invite/qpbSqJU>
+    Discord Kod Paylaşım Sunucumuz: <https://discord.gg/UbBbWzt>
 
-                            FYUKAS BOŞ BOT ALTYAPI
+                            PInkCode BOŞ BOT ALTYAPI
