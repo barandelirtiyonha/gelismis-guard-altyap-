@@ -1,6 +1,6 @@
-                            PinkCode BOŞ BOT ALTYAPI
+                            PinkCode BOS altyapi
  
  
-    Discord Kod Paylaşım Sunucumuz: <https://discord.gg/UbBbWzt>
+    Discord Kod Paylaşım Sunucumuz: <https://discord.gg/bUFSnAQ>
 
-                            PInkCode BOŞ BOT ALTYAPI
+                            PInkCode BOS KOMUTLU ALTYAPI
