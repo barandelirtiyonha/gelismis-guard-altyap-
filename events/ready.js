@@ -10,10 +10,8 @@ module.exports = client => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} ismi ile giriş yapıldı!`);
   client.user.setStatus("online");
    var oyun = [
-        "BAKIMDAYIZ",
-        "BAKIMDAYIZ",
-        "BAKIMDAYIZ",
-        "BAKIMDAYIZ"
+        "Twx Creative",
+
 
     ];
 
