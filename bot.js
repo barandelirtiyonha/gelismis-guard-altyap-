@@ -266,3 +266,70 @@ client.on("message", async  msg => {
 //-------------------------------REKLAM ENGELLEME SON-------------------------------\\
 //-------------------------------REKLAM ENGELLEME SON-------------------------------\\
 
+//-------------------------------ROL KORUMA-----------------------------------------\\
+//-------------------------------ROL KORUMA-----------------------------------------\\
+//-------------------------------ROL KORUMA-----------------------------------------\\
+
+client.on("roleDelete", async (role) => {
+  let guild = role.guild;
+  if(!guild.me.hasPermission("MANAGE_ROLES")) return;
+  let koruma = db.fetch(`korumaacik_${role.guild.id}`)
+  if(koruma == null) return; 
+  let e = await guild.fetchAuditLogs({type: 'ROLE_DELETE'});
+  let member = guild.members.get(e.entries.first().executor.id);
+  if(!member) return;
+  if(member.hasPermission("ADMINISTRATOR")) return;
+  let mention = role.mentionable;
+  let hoist = role.hoist;
+  let color = role.hexColor;
+  let name = role.name;
+  let perms = role.permissions;
+  let position = role.position
+  role.guild.createRole({
+    name: name,
+    color: color,
+    hoist: hoist,
+    position: position,
+    permissions: perms,
+    mentionable: mention
+  }).then(rol => {
+    if(!db.has(`korumalog_${guild.id}`)) return;
+    let logs = guild.channels.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
+    if(!logs) return db.delete(`korumalog_${guild.id}`); else {
+      const embed = new Discord.RichEmbed()
+      .setDescription(`Silinen Rol: <@&${rol.id}> (Yeniden oluşturuldu!)\nSilen Kişi: ${member.user}`)
+      .setColor('RED')
+      .setAuthor(member.user.tag, member.user.displayAvatarURL)
+      logs.send(embed);
+    }
+})
+  
+  
+  
+})
+client.on("channelDelete", async channel => {
+  if(!channel.guild.me.hasPermission("MANAGE_CHANNELS")) return;
+  let guild = channel.guild;
+  const logs = await channel.guild.fetchAuditLogs({ type: 'CHANNEL_DELETE' })
+  let member = guild.members.get(logs.entries.first().executor.id);
+  if(!member) return;
+  if(member.hasPermission("ADMINISTRATOR")) return;
+  channel.clone(channel.name, true, true, "Kanal silme koruması sistemi").then(async klon => {
+    if(!db.has(`korumalog_${guild.id}`)) return;
+    let logs = guild.channels.find(ch => ch.id === db.fetch(`korumalog_${guild.id}`));
+    if(!logs) return db.delete(`korumalog_${guild.id}`); else {
+      const embed = new Discord.RichEmbed()
+      .setDescription(`Silinen Kanal: <#${klon.id}> (Yeniden oluşturuldu!)\nSilen Kişi: ${member.user}`)
+      .setColor('RED')
+      .setAuthor(member.user.tag, member.user.displayAvatarURL)
+      logs.send(embed);
+    }
+    await klon.setParent(channel.parent);
+    await klon.setPosition(channel.position);
+  })
+})
+
+
+//-------------------------------ROL KORUMA SON-----------------------------------------\\
+//-------------------------------ROL KORUMA SON-----------------------------------------\\
+//-------------------------------ROL KORUMA SON-----------------------------------------\\
