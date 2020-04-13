@@ -134,3 +134,30 @@ client.on('error', e => {
 client.login(ayarlar.token);
 
 //---------------------------------KOMUTLAR---------------------------------\\
+
+//---------------------------------Kanal Koruma Sistemi---------------------\\
+//---------------------------------Kanal Koruma Sistemi---------------------\\
+//---------------------------------Kanal Koruma Sistemi---------------------\\
+
+client.on("channelDelete", async function(channel) {
+if(channel.guild.id !== "sunucu id") return;
+    let logs = await channel.guild.fetchAuditLogs({type: 'CHANNEL_DELETE'});
+    if(logs.entries.first().executor.bot) return;
+    channel.guild.member(logs.entries.first().executor).roles.filter(role => role.name !== "@everyone").array().forEach(role => {
+              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("alıncak rol 1"))
+              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("alıncak rol 2"))
+    })
+const sChannel = channel.guild.channels.find(c=> c.id ==="log kanal id")
+const cıks = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setDescription(`${channel.name} adlı Kanal silindi Silen kişinin yetkilerini  çekiyom moruk çıkssss :tiks:`)
+.setFooter('Developer By Lord')
+sChannel.send(cıks)
+  
+channel.guild.owner.send(` **${channel.name}** adlı Kanal silindi Silen  kişinin yetkilerini aldım:tiks:`)
+}) 
+
+//---------------------------------Kanal Koruma Sistemi Son---------------------\\
+//---------------------------------Kanal Koruma Sistemi Son---------------------\\
+//---------------------------------Kanal Koruma Sistemi Son---------------------\\
+
