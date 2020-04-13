@@ -351,10 +351,36 @@ client.on('guildMemberAdd',async member => {
 //----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME SON--------------------------------\\
 //----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME SON--------------------------------\\
 
-//----------------------------REKLAM ENGEL ----------------------------------------------------||
-//----------------------------REKLAM ENGEL ----------------------------------------------------||
-//----------------------------REKLAM ENGEL ----------------------------------------------------||
+//----------------------------LİNK ENGEL ----------------------------------------------------||
+//----------------------------LİNK ENGEL ----------------------------------------------------||
+//----------------------------LİNK ENGEL ----------------------------------------------------||
 
+client.on("message", async  msg => {
+ var mayfe = await db.fetch(`reklam_${msg.guild.id}`)
+    if (mayfe == 'acik') {
+        const birisireklammidedi = [".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl", ".org", ".com.tr", ".biz", "net", ".rf.gd", ".az", ".party", "discord.gg",];
+        if (birisireklammidedi.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                    return msg.reply('Bu Sunucuda Reklam Engelleme Filtresi Aktiftir. Reklam Yapmana İzin Veremem !').then(msg => msg.delete(3000));
+    
 
+  msg.delete(3000);                              
 
-//----------------------------REKLAM ENGEL ----------------------------------------------------||
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    else if (mayfe == 'kapali') {
+      
+    }
+    if (!mayfe) return;
+  })
+  ;
+
+//----------------------------LİNK ENGEL SON----------------------------------------------------||
+//----------------------------LİNK ENGEL SON----------------------------------------------------||
+//----------------------------LİNK ENGEL SON----------------------------------------------------||
