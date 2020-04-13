@@ -334,3 +334,27 @@ client.on("channelDelete", async channel => {
 //-------------------------------ROL KORUMA SON-----------------------------------------\\
 //-------------------------------ROL KORUMA SON-----------------------------------------\\
 
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME--------------------------------\\
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME--------------------------------\\
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME--------------------------------\\
+
+client.on('guildMemberAdd',async member => {
+  let gkisi = client.users.get(member.id);
+  
+    const ktarih = new Date().getTime() - gkisi.createdAt.getTime();   
+    if (ktarih < 2592000001)  //Bu kısımdaki sayı yerine yani milisaniye yerine https://www.convertworld.com/tr/zaman/milisaniye.html bu siteden bakıp istediğiniz süreyi girebilirsiniz.
+  member.addRole("ROL ID")
+  member.removeRole("ROL ID")
+});
+
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME SON--------------------------------\\
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME SON--------------------------------\\
+//----------------------------ŞÜPHELİ GÖRÜNENE ŞÜPHELİ ROL VERME SON--------------------------------\\
+
+//----------------------------REKLAM ENGEL ----------------------------------------------------||
+//----------------------------REKLAM ENGEL ----------------------------------------------------||
+//----------------------------REKLAM ENGEL ----------------------------------------------------||
+
+
+
+//----------------------------REKLAM ENGEL ----------------------------------------------------||
