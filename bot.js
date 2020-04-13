@@ -139,25 +139,16 @@ client.login(ayarlar.token);
 //---------------------------------Kanal Koruma Sistemi---------------------\\
 //---------------------------------Kanal Koruma Sistemi---------------------\\
 
-client.on("channelDelete", async function(channel) {
-if(channel.guild.id !== "sunucu id") return;
-    let logs = await channel.guild.fetchAuditLogs({type: 'CHANNEL_DELETE'});
-    if(logs.entries.first().executor.bot) return;
-    channel.guild.member(logs.entries.first().executor).roles.filter(role => role.name !== "@everyone").array().forEach(role => {
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("alıncak rol 1"))
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("alıncak rol 2"))
-    })
-const sChannel = channel.guild.channels.find(c=> c.id ==="log kanal id")
-const cıks = new Discord.RichEmbed()
-.setColor('RANDOM')
-.setDescription(`${channel.name} adlı Kanal silindi Silen kişinin yetkilerini  çekiyom moruk çıkssss :tiks:`)
-.setFooter('Developer By Lord')
-sChannel.send(cıks)
-  
-channel.guild.owner.send(` **${channel.name}** adlı Kanal silindi Silen  kişinin yetkilerini aldım:tiks:`)
-}) 
+client.on("channelDelete", async channel => {
+  const logs = await channel.guild.fetchAuditLogs({ type: 'CHANNEL_DELETE' }).then(audit => audit.entries.first())
+  const deleter = await channel.guild.members.get(logs.executor.id);
+  if(deleter.id == "KENDİ İDİNİZ") return; //bu satıra kendi id'nizi yazın sizin kanal silmenizi engellemeyecektir
+  channel.clone(undefined, true, true, "Kanal silme koruması sistemi").then(async klon => {
+    await klon.setParent(channel.parent);
+    await klon.setPosition(channel.position);
+  })
+})
 
 //---------------------------------Kanal Koruma Sistemi Son---------------------\\
 //---------------------------------Kanal Koruma Sistemi Son---------------------\\
 //---------------------------------Kanal Koruma Sistemi Son---------------------\\
-
