@@ -181,3 +181,88 @@ client.on("message", msg => {
 //-------------------------------EVERYONE-HERE Engel Son------------------------\\
 //-------------------------------EVERYONE-HERE Engel Son------------------------\\
 //-------------------------------EVERYONE-HERE Engel Son------------------------\\
+
+//-------------------------------Küfür Engel --------------------------------\\
+//-------------------------------Küfür Engel --------------------------------\\
+//-------------------------------Küfür Engel --------------------------------\\
+
+client.on("message", async msg => {
+  
+  
+ const i = await db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                          
+                      return msg.reply('Bu Sunucuda Küfür Filtresi Aktiftir.').then(msg => msg.delete(3000));
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    if (!i) return;
+});
+
+client.on("messageUpdate", msg => {
+  
+  
+ const i = db.fetch(`${msg.guild.id}.kufur`)
+    if (i) {
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "am", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq",];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                          
+                      return msg.reply('Bu Sunucuda Küfür Filtresi Aktiftir.').then(msg => msg.delete(3000));
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    if (!i) return;
+});
+
+//-------------------------------Küfür Engel Son--------------------------------\\
+//-------------------------------Küfür Engel Son--------------------------------\\
+//-------------------------------Küfür Engel Son--------------------------------\\
+
+//-------------------------------REKLAM ENGELLEME-------------------------------\\
+//-------------------------------REKLAM ENGELLEME-------------------------------\\
+//-------------------------------REKLAM ENGELLEME-------------------------------\\
+
+client.on("message", async  msg => {
+ var i = await db.fetch(`reklam_${msg.guild.id}`)
+    if (i == 'acik') {
+       const reklam = [".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl",".ga","cf", ".org", ".com.tr", ".biz", "net", ".rf.gd", ".az", ".party"];
+        if (reklam.some(word => msg.content.includes(word))) {
+          try {
+            if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+                    return msg.reply('no reklam').then(msg => msg.delete(3000));
+    
+
+  msg.delete(3000);                              
+
+            }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    }
+    else if (i == 'kapali') {
+      
+    }
+    if (!i) return;
+  })
+  ;
+
+//-------------------------------REKLAM ENGELLEME SON-------------------------------\\
+//-------------------------------REKLAM ENGELLEME SON-------------------------------\\
+//-------------------------------REKLAM ENGELLEME SON-------------------------------\\
+
