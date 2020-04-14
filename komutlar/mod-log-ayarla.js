@@ -55,6 +55,6 @@ exports.conf = {
 
 exports.help = {
     name: 'mod-log-ayarla',
-    description: 'Otorolü ayarlar.',
-    usage: 'otorol <@rol>'
+    description: 'Mod Logu ayarlar.',
+    usage: 'mod-log-ayarla'
 }
