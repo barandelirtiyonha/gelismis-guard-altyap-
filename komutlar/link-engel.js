@@ -8,12 +8,12 @@ exports.run = async (bot, message, args) => {
   if (args[0] == 'aç') {
     var i = await db.set(`reklam_${message.guild.id}`, 'acik')
    
-      message.channel.send('Reklam Engel başarıyla açıldı! `Üyeleri Yasakla` yetkisine sahip olanların reklamı engellenmicektir.')
+      message.channel.send('Link Engel başarıyla açıldı! `Üyeleri Yasakla` yetkisine sahip olanların reklamı engellenmicektir.')
     }
   
   if (args[0] == 'kapat') {
     var i = await db.set (`reklam_${message.guild.id}`, 'kapali')
-      message.channel.send('Reklam Engel başarıyla kapatıldı! Artık herkes reklam yapabilir.')
+      message.channel.send('Link Engel başarıyla kapatıldı! Artık herkes reklam yapabilir.')
     }
   
 
@@ -27,7 +27,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'reklamengel',
+  name: 'link-engel',
   description: '[Admin Komutu]',
-  usage: 'reklamengel'
+  usage: 'link-engel'
 };
