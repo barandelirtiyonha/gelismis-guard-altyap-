@@ -78,7 +78,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "tempmute",
+  name: "süreli-mute",
   description: "",
-  usage: ""
+  usage: "süreli-mute"
 };
