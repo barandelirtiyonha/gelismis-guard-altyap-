@@ -8,9 +8,9 @@ exports.run = async(client, message, args) => {
         const yardim = new Discord.RichEmbed()
 
              .setColor('#fff000')
-             .setAuthor(`Kategoriler`, client.user.avatarURL) 
+             .setAuthor(`Yardım Komutları`, client.user.avatarURL) 
              .setThumbnail(client.user.avatarURL)
-             .addField(`Komutlar`, `${ayarlar.prefix}ban \n ${ayarlar.prefix}everyone-engelle "aç-kapat" `) // bunlar boş kalırsa hata verir
+             .addField(`Komutlar`, `**${ayarlar.prefix}ban** İstediğiniz Kullanıcıyı Banlamanızı Sağlar.\n**${ayarlar.prefix}ever-engel "aç-kapat"** Everyone Ve Here Açar/kapatır.\n**${ayarlar.prefix}jail-kanal** Jail Kanalı Ayarlar.  `) // bunlar boş kalırsa hata verir
              .addField(`Linkler ->`, `[Lord Discord](https://discord.gg/Z2zuGCR)`) // bunlar boş kalırsa hata verir
              .setFooter(`Menüyü ${message.author.username} istedi moruq.`, message.author.avatarURL)
             

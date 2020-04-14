@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
   
     let args = message.content.split(' ').slice(1);
     const secenekler = args.slice(0).join(' ');
-    if(secenekler.length < 1) return message.reply("**Everyone ve Here Yasaklama Sistemi \n Açmak için .everyone-engelle aç \n Kapatmak için .everyone-engelle kapat**").then(m => m.delete(10000));
+    if(secenekler.length < 1) return message.reply("**Everyone ve Here Yasaklama Sistemi \n Açmak için !!ever-engel aç \n Kapatmak için !!ever-engel kapat**").then(m => m.delete(10000));
   if (secenekler !== "aç" && secenekler !== "kapat" && secenekler !== "on" && secenekler !== "off") return message.reply("aç veya kapat yaz!")
     if (secenekler === "aç" || secenekler === "on") {
     
@@ -48,7 +48,7 @@ exports.run = async (client, message) => {
       };
       
     exports.help = {
-        name: 'everyone-engelle',
+        name: 'ever-engel',
         description: 'Everyone ve Here engelleme sistemini açıp kapatmanızı sağlar.',
-        usage: 'everyone-engelle <aç/kapat>'
+        usage: 'ever-engel <aç/kapat>'
     };
