@@ -11,6 +11,7 @@ dependencies:
   common-tags: 1.8.0
   croxy-api: 1.2.1
   dblapi.js: 2.3.0
+  discord-anti-spam-tr: 0.7.4
   discord.js: 11.5.1
   discord.js-commando: 0.10.0
   express: 4.17.1
@@ -1215,6 +1216,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-082BIh4+pAdCz83lVtTpnpjdxxs=
+  /discord-anti-spam-tr/0.7.4:
+    dev: false
+    resolution:
+      integrity: sha512-LSk5KjdP0FVWH1Usx5tABMEYTsWivWeR/WxUklEKaPYNXKgbytMbwEd2T6ZB5fJEGwzMZedz4SccIGWUJNWJnw==
   /discord.js-commando/0.10.0:
     dependencies:
       common-tags: 1.8.0
@@ -4131,6 +4136,7 @@ specifiers:
   common-tags: ^1.8.0
   croxy-api: ^1.2.1
   dblapi.js: ^2.3.0
+  discord-anti-spam-tr: ^0.7.4
   discord.js: ^11.5.1
   discord.js-commando: ^0.10.0
   express: ^4.17.1
