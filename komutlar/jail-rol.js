@@ -11,7 +11,7 @@ exports.run = async(client, message, args) => {
    var x2 = başarısız[Math.floor(Math.random() * başarısız.length)];
   
 if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply(`**${ayarlar.prefix}jail-rol ayarla/sıfırla** isimli komutu kullanabilmek için \`SUNUCUYU YÖNET\` yetkisine sahip olman gerekiyor.`)
-if (!args[0]) return message.reply(`Sistemi kullanabilmek için, .jail-rol ayarla/sıfırla @rol yazmalısın.\n`)
+if (!args[0]) return message.reply(`Sistemi kullanabilmek için, !!jail-rol ayarla/sıfırla @rol yazmalısın.\n`)
    
   
   if (args[0] == 'ayarla') {
