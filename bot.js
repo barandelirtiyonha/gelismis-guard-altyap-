@@ -373,3 +373,24 @@ client.on("message", async  msg => {
 //----------------------------LİNK ENGEL SON----------------------------------------------------||
 //----------------------------LİNK ENGEL SON----------------------------------------------------||
 //----------------------------LİNK ENGEL SON----------------------------------------------------||
+
+//EMOJİYE TIKLAMA
+
+client.on('messageReactionRemove', (reaction, user) => {
+	if (reaction.message.id == "701094166352101406") {//Geçerli olması istediğiniz mesajın ID'sini yazabilirsiniz.
+	  if (reaction.emoji.name == "glitch") {//Dilediğiniz emojiyi koyabilirsiniz.
+		reaction.message.guild.members.get(user.id).removeRole(reaction.message.guild.roles.find('name', 'Altyapı'))//Dilediğiniz rolün adını yazabilirsiniz.
+	  }
+	  if (reaction.emoji.name == "glitch") {//Dilediğiniz emojiyi koyabilirsiniz.
+		reaction.message.guild.members.get(user.id).removeRole(reaction.message.guild.roles.find('name', 'Altyapı'))//Dilediğiniz rolün adını yazabilirsiniz.
+	  }
+	  if (reaction.emoji.name == "glitch") {//Dilediğiniz emojiyi koyabilirsiniz.
+		  reaction.message.guild.members.get(user.id).removeRole(reaction.message.guild.roles.find('name', 'Altyapı'))//Dilediğiniz rolün adını yazabilirsiniz.
+		}
+     if (reaction.emoji.name == "glitch") {//Dilediğiniz emojiyi koyabilirsiniz.
+		  reaction.message.guild.members.get(user.id).removeRole(reaction.message.guild.roles.find('name', 'Altyapı'))//Dilediğiniz rolün adını yazabilirsiniz.
+		}
+	}
+  });
+
+//EMOJİYE TIKLAMALI KAYIT SON
